@@ -1,14 +1,19 @@
 {
-  "name": "@hexlet/code",
-  "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/nailyina/typescript-project-81/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/nailyina/typescript-project-81/actions)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "typescript": "^5.7.3"
-  }
+    "name": "@hexlet/code",
+    "version": "1.0.0",
+    "description": "[![Actions Status](https://github.com/nailyina/typescript-project-81/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/nailyina/typescript-project-81/actions)",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint ./src/**/*.ts"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@eslint/js": "^9.19.0",
+        "eslint": "^9.19.0",
+        "globals": "^15.14.0",
+        "typescript": "^5.7.3",
+        "typescript-eslint": "^8.23.0"
+    }
 }
