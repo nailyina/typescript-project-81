@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { Tag } from "../src/tagGenerator";
+import { Tag } from "../src/tagGenerator.ts";
 
 test("simple tag generation", () => {
     expect(new Tag("br").toString()).toBe("<br>");
