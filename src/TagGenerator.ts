@@ -4,11 +4,13 @@ type TagAttribute = {
 
 export class Tag {
     private tagName: string;
-    private tagAttributes: TagAttribute;
+    private tagAttributes?: TagAttribute;
+    private value?: string;
 
-    constructor(tagName: string, tagAttributes: TagAttribute) {
+    constructor(tagName: string, tagAttributes?: TagAttribute, value?: string) {
         this.tagName = tagName;
         this.tagAttributes = tagAttributes;
+        this.value = value;
     }
 
     public toString(): string {
@@ -16,6 +18,10 @@ export class Tag {
 
         for (const key in this.tagAttributes) {
             tag += ` ${key}="${this.tagAttributes[key]}"`;
+        }
+
+        if (this.value) {
+            tag += `>${this.value}</${this.tagName}`;
         }
 
         tag += `>`;
