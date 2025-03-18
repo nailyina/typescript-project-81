@@ -2,7 +2,7 @@
     "name": "@hexlet/code",
     "version": "1.0.0",
     "description": "[![Actions Status](https://github.com/nailyina/typescript-project-81/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/nailyina/typescript-project-81/actions)",
-    "main": "src/inex.ts",
+    "main": "src/index.ts",
     "scripts": {
         "build": "rm -rf ./dist && tsc",
         "exec": "npx tsx ./src/index.ts",
