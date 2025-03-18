@@ -1,1 +1,3 @@
-export { Tag } from './tagGenerator'
+import { Tag } from "./tagGenerator";
+
+console.log(new Tag("br"));
