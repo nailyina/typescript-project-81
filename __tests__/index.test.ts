@@ -7,7 +7,7 @@ test('simple tag generation', () => {
 
 test('tags with attributes', () => {
   expect(new Tag('input', { type: 'submit', value: 'Save' }).toString()).toBe(
-    `<input type="submit" value="Save"`,
+    `<input type="submit" value="Save">`,
   )
 })
 
