@@ -1,3 +1,3 @@
-import { Tag } from "./tagGenerator";
+import { Tag } from './tagGenerator'
 
-console.log(new Tag("br"));
+console.log(new Tag('br'))
