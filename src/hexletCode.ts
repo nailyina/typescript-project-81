@@ -29,12 +29,24 @@ class FormBuilder {
 
   input(name: string, options: { as?: string } = {}): void {
     const value = this.template[name]
-    const type = options.as === 'textarea' ? 'textarea' : 'input'
+    const type = name === 'name' ? 'input' : 'textarea'
 
     if (type === 'input') {
+      const label = new Tag(
+        'label',
+        { for: name },
+        `${name[0].toUpperCase()}${name.slice(1)}`,
+      )
+      this.fields.push(label.toString())
       const inputTag = new Tag(type, { name: name, type: 'text', value: value })
       this.fields.push(inputTag.toString())
     } else {
+      const label = new Tag(
+        'label',
+        { for: name },
+        `${name[0].toUpperCase()}${name.slice(1)}`,
+      )
+      this.fields.push(label.toString())
       const textareaTag = new Tag(
         type,
         {
@@ -47,6 +59,11 @@ class FormBuilder {
       )
       this.fields.push(textareaTag.toString())
     }
+  }
+
+  submit() {
+    const submitTag = new Tag('input', { type: 'submit', value: 'Save' })
+    this.fields.push(submitTag.toString())
   }
 
   toString(): string {
