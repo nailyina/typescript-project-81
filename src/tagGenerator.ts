@@ -1,4 +1,4 @@
-type TagAttribute = Record<string, string>
+import { TagAttribute } from './types'
 
 export class Tag {
   private tagName: string
@@ -17,12 +17,14 @@ export class Tag {
     for (const key in this.tagAttributes) {
       tag += ` ${key}="${this.tagAttributes[key]}"`
     }
+    tag += `>`
 
     if (this.value) {
-      tag += `>${this.value}</${this.tagName}`
+      tag += `${this.value}`
     }
 
-    tag += `>`
+    if (this.value || (this.tagAttributes && this.tagName !== 'input'))
+      tag += `</${this.tagName}>`
 
     return tag
   }
